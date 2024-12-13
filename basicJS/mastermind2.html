@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MasterMind</title>
+  <style>
+    #combinacion {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <script>
+    let colores = ["R", "G", "B", "Y", "O", "P"];
+    let secret = [];
+    let intentos;
+    let nombresJugadores = [];
+    let intentosJugadores = [];
+    secreta();
+
+    function secreta() {
+      intentos = 0;
+      for (let i = 0; i < 4; i++) {
+        secret[i] = colores[Math.floor(Math.random() * colores.length)];
+      }
+      console.log(secret);
+    }
+
+    function calcula(user) {
+      let pos = 0;
+      let col = 0;
+      let s = "";
+      user = user.toString().toUpperCase();
+      if (user.length != 4 || user.includes("^RGYOP")) {
+        document.getElementById("fallo").innerHTML = "Combinación inadecuada.";
+      } else {
+        intentos++;
+        document.getElementById("fallo").innerHTML = "";
+        for (let i = 0; i < 4; i++) {
+          // Verificar la posición
+          if (secret[i] == user.charAt(i)) {
+            pos++;
+          }
+          // Verificar el color
+          if (user.includes(secret[i])) {
+            col++;
+          }
+        }
+
+        if (pos == 4) {
+          let nombre = prompt("¡Felicidades! Has ganado en " + intentos + " intentos. Introduce tu nombre para el ranking:");
+          rankingJugador(nombre, intentos); // Enviar el nombre y los intentos a la funcion
+          volver();
+        } else {
+          s += user + ", has acertado " + pos + " posiciones y " + col + " colores.<br>";
+          document.getElementById("res").innerHTML = document.getElementById("res").innerHTML.toString() + s;
+          document.getElementById("int").innerHTML = "Llevas " + intentos + " intentos";
+          document.getElementById("input").value = "";
+        }
+      }
+    }
+    function volver() {
+      document.getElementById("combinacion").style.display = "none";
+      document.getElementById("menu").style.display = "block";
+      reset();
+    }
+    function reset(){
+      document.getElementById("res").innerHTML = "";
+      document.getElementById("int").innerHTML = "";
+      document.getElementById("input").value = "";
+      secreta();
+    }
+
+    function rankingJugador(nombre, intentos) {
+
+      let posicion = intentosJugadores.length;
+      for (let i = 0; i < intentosJugadores.length; i++) {
+        if (intentosJugadores[i] > intentos) {
+          posicion = i;
+        }
+      }
+      nombresJugadores.splice(posicion, 0, nombre);
+      intentosJugadores.splice(posicion, 0, intentos);
+    }
+
+
+    function jugar() {
+      document.getElementById("menu").style.display = "none";
+      document.getElementById("combinacion").style.display = "block";
+    }
+
+    function ranking() {
+      let ranking = "Ranking de jugadores:\n\n";
+      if (nombresJugadores.length === 0) {
+        ranking = "Aún no hay jugadores en el ranking";
+      } else {
+        for (let i = 0; i < nombresJugadores.length; i++) {
+          ranking += nombresJugadores[i] + " - " + intentosJugadores[i] + " intentos\n";
+        }
+      }
+      alert(ranking);
+    }
+
+    function comoSeJuega() {
+      alert("El juego propone una combinación aleatoria de 4 colores indicados por su inicial que el jugador deberá descifrar.\n\n" +
+        "Al introducir una combinación, el juego indica cuántos de esos colores están en la combinación y además cuántos de ellos están también en la posición correcta.");
+    }
+
+    /*function salir() {
+      alert("¡Gracias por jugar!");
+      close();
+    }*/
+  </script>
+
+  <h1> MASTERMIND </h1>
+  <div id="menu">
+    <h4><button onclick="jugar()">Jugar</button></h4>
+    <h4><button onclick="ranking()">Ranking de jugadores</button></h4>
+    <h4><button onclick="comoSeJuega()">Cómo se juega</button></h4>
+    <!--<h4><button onclick="salir()">Salir</button></h4>-->
+  </div>
+
+  <div id="combinacion">
+    <button onclick="volver()">Volver</button>
+    <p>Colores disponibles: R, G, B, Y, O, P<br>Introduce una combinación de 4 colores:</p>
+    <input type="text" id="input">
+    <button onclick="calcula(document.getElementById('input').value)">Calcula</button>
+    <p id="int"></p>
+    <p id="res"></p>
+    <p id="fallo"></p>
+  </div>
+
+</body>
+
+</html>
