@@ -1,0 +1,271 @@
+@font-face {
+    font-family: photon-entypo;
+    src: url(../fonts/photon-entypo.eot);
+    src: url(../fonts/photon-entypo.eot?#iefix) format("eot"), url(../fonts/photon-entypo.woff) format("woff"), url(../fonts/photon-entypo.ttf) format("truetype");
+    font-weight: 400;
+    font-style: normal
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+}
+
+header {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: mediumslateblue;
+    color: white;
+}
+header p{
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+
+.nav {
+    margin: 20px;
+    width: calc(100%-20px);
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+.btns {
+    width: 200px;
+}
+
+.mes {
+
+    margin-left: 100px;/*mitad de los botones*/
+
+    color: mediumslateblue;
+    padding: 0;
+}
+.group-reloj{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    width: 300px;
+}
+.reloj {
+    width: 90px;
+    color: mediumslateblue;
+    text-align: center;
+}
+
+.reloj:hover {
+    cursor: pointer;
+}
+
+/*EL ICONO*/
+.icon{
+    font-size: 30px;
+}
+.icon:before {
+    display: inline-block;
+    font-size: 100%;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+.icon:before {
+    font-family: photon-entypo
+}
+
+.icon-calendar:before {
+    content: '\e85b'
+}
+
+/*BOTONES*/
+
+button {
+    color: white;
+}
+
+.btn {
+    background-color: rgb(59, 71, 82);
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 1px transparent;
+    border-radius: 2px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.btn-group .btn {
+    margin-left: -10px;
+}
+
+.btn-group>.btn:first-child {
+    margin-left: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0
+}
+
+.btn-group>.btn:last-child {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0
+}
+
+.active:hover {
+    cursor: pointer;
+    background-color: rgb(46, 55, 65);
+}
+
+.inactive {
+    background-color: rgb(107, 128, 148);
+}
+
+.td:hover {
+    cursor: pointer;
+}
+
+/*TABLA*/
+table {
+    margin: auto;
+    width: calc(100% - 40px);
+    max-width: 1400px;
+    height: calc(100% - 20px);
+    max-height: 1400px;
+    border-collapse: collapse;
+
+}
+
+th,
+td {
+
+    border: 1px lightgray solid;
+}
+
+td {
+    width: 100px;
+    height: 100px;
+    max-width: 200px;
+    max-height: 200px;
+    vertical-align: top;
+    text-align: right;
+    color: gray;
+}
+
+.ant {
+    color: lightgray;
+}
+
+.hoy {
+    background-color: blanchedalmond;
+}
+
+.event {
+    width: 100%;
+    border-radius: 2px;
+    text-align: right;
+}
+
+
+/*EVENTOS*/
+#popup1, #popup2 {
+    display: none;
+    position: absolute;
+    align-content: center;
+    z-index: 15;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.685);
+}
+
+
+.form, .error {
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    margin: auto;
+    border-radius: 5px;
+    
+}
+.form{
+    width: 400px;
+    height: 300px;
+}
+.error{
+    width: 400px;
+    height: 80px;
+}
+
+.form p {
+    color: mediumslateblue;
+    font-weight: bold;
+    margin-top: 0;
+
+}
+
+.form div {
+    width: 100%;
+    margin: auto;
+}
+
+.formbtns {
+    margin: auto;
+}
+
+.formbtns button {
+    width: 175px;
+    height: 40px;
+}
+
+#btnGuardar, #btnError {
+    background-color: mediumslateblue;
+}
+
+#btnVolver {
+    background-color: brown;
+}
+
+#nEvento {
+    width: 358px;/*el input es más grande que el text area por 2px*/
+    height: 30px;
+}
+
+#dEvento {
+    width: 360px;
+    height: 150px;
+}
+
+.ev {
+    margin: auto;
+    padding: 2px;
+    text-align: left;
+    color: white;
+    width: 90%;
+    border-radius: 5px;
+
+}
+
+.ev0 {
+
+    background-color: dodgerblue;
+}
+
+.ev1 {
+
+    background-color: green;
+}
+
+.ev2 {
+    background-color: brown;
+}

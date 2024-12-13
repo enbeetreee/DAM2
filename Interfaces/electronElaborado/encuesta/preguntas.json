@@ -1,0 +1,23 @@
+[
+    {
+       "pregunta": "¿Te gusta JavaScript",
+       "rA": "Si",
+       "rB": "No",
+       "rC": "No me gusta programar",
+       "correcta": "a"
+    },
+    {
+       "pregunta": "¿Odias CSS",
+       "rA": "Imposible",
+       "rB": "Cada día",
+       "rC": "¿Qué es CSS?",
+       "correcta": "b"
+    },
+    {
+       "pregunta": "¿Es mejor Electron que Flutter?",
+       "rA": "Si, porque Flutter es de google",
+       "rB": "No, porque Flutter es de google",
+       "rC": "No me gusta la física",
+       "correcta": "b"
+    }
+ ]
