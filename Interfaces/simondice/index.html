@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Simon Dice</title>
+    <link rel="stylesheet" href="./css/simon.css">
+</head>
+
+<body>
+    <div id="menu">
+        <h1>Simon Dice</h1>
+        <button class="btnMenu" id="btnPlay">Play</button>
+        <button class="btnMenu" id="btnScore">Score</button>
+        <button class="btnMenu" id="btnQuit">Quit</button>
+    </div>
+    <div id="divScore" style="display: none;">
+        <button id="btnBack1" class="btnBack">&lt;</button>
+        <div id="divInScore">
+            
+            <h1 class="recTit">Records</h1>
+            <table style="background-color: transparent; border: transparent;" id="scoreTable"></table>
+        </div>
+        
+    </div>
+    <div id="game" style="display: none;">
+        <button id="btnBack2" class="btnBack">&lt;</button>
+        <table id="tabla"></table>
+        <footer>
+    
+            <span class="score">Score: <span id="score">0</span></span>
+            <button id="btnStart" class="btnMenu">Start</button>
+            <select id="dificultad">
+                <option value="3">Easy</option>
+                <option value="4">Medium</option>
+                <option value="5">Hard</option>
+            </select>
+    
+    
+    
+        </footer></div>
+
+</body>
+<script src="functions.js">
+
+</script>
+
+</html>
