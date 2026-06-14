@@ -1,0 +1,20 @@
+{
+    "tamaño":[
+        {"nombre": "Pequeña","precio":1},
+        {"nombre":"Mediana","precio":2},
+        {"nombre":"Grande","precio":3}
+    ],
+    "masa":[
+        {"nombre": "Fina","precio":1},
+        {"nombre":"Gruesa","precio":2}
+    ],
+    "ingredientes": [
+        {"nombre": "Pepperoni","precio":1},
+        {"nombre":"Salchicha","precio":2},
+        {"nombre":"Parmesano","precio":3},
+        {"nombre": "Olivas","precio":1},
+        {"nombre":"Champiñón","precio":2},
+        {"nombre": "Tomates","precio":1},
+        {"nombre":"Anchoas","precio":3}
+    ]
+}
