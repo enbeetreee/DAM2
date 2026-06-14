@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <link rel="stylesheet" href="./css/photon.min.css">
+    <link rel="stylesheet" href="./css/crealibros.css">
+</head>
+
+<body>
+    <div class="window">
+        <header class="toolbar toolbar-header">
+            <h1 class="title">Libros</h1>
+
+        </header>
+
+        <div class="window-content" id="window-form">
+
+            <form>
+
+                <label>Título</label>
+                <input type="text" class="form-control" placeholder="e.g: Maus" id="newTitle">
+
+                <label>Autor</label>
+                <input type="text" class="form-control" placeholder="e.g: Art Spiegelman" id="newAuthor">
+
+                <label>Imagen</label>
+                <input type="text" class="form-control" placeholder="e.g: 5.jpg" id="newImg">
+
+            </form>
+            <div class="botones">
+                <button class="btn btn-default" id="btn-buscar">Buscar</button>
+                <button class="btn btn-default" id="btn-crear">Crear</button>
+            </div>
+        </div>
+        <div class="window-content" id="window-tabla">
+
+            <table class="table-striped">
+                <thead>
+                    <tr>
+                        <th>Título</th>
+                        <th>Autor</th>
+                        <th>Imagen</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="tabla"></tbody>
+            </table>
+        </div>
+        <footer class="toolbar toolbar-footer">
+            <h1 class="title">MongoDB</h1>
+        </footer>
+    </div>
+
+
+    <script src="app.js">
+
+    </script>
+
+</html>
