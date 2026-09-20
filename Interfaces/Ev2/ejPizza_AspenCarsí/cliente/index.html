@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>Pedidos Pizza</title>
+    <link rel="stylesheet" href="./css/photon.min.css">
+	<link rel="stylesheet" href="./css/estilos.css">
+
+</head>
+
+<body>
+    <div class="window">
+        <header class="toolbar toolbar-header">
+            <h1 class="title" id="muestra">Haga su pedido</h1>
+        </header>
+        <!--Contenido principal-->
+        <div class="window-content">
+            <div class="pane-group">
+                <div class="pane" id="separacion3">
+					<h1>
+					<img class="img-circle media-object pull-left" src="./images/1.png" width="32" height="32">
+					</h1>
+					<span class="icon icon-user"></span>
+					<input type="text" id="nombre" class="form-control" placeholder="nombre cliente" autofocus>
+					<span class="icon icon-phone"></span>
+					<input type="text" id="telefono" class="form-control" placeholder="teléfono cliente">
+					<span class="icon icon-address"></span>
+					<input type="text" id="direccion" class="form-control" placeholder="dirección cliente">
+				</div>
+                <div class="pane" id="separacion2">
+                    <h1>
+						<img class="img-circle media-object pull-left" src="./images/2.png" width="32" height="32">
+					</h1>
+					<!--Tamaño-->
+					<ul class="list-group">
+						<li class="list-group-item">
+							<div class="radio">
+								<label>
+									<input class="radio" type="radio" id="tamaño1" name="tamaño" value="Pequeña" checked>
+									Pequeña
+								</label>
+								<img class="img-circle media-object pull-right" src="./images/pizza1.png" width="22"
+									height="22">
+							</div>
+						</li>
+						<li class="list-group-item">
+							<div class="radio">
+								<label>
+									<input type="radio" id="tamaño2" name="tamaño" value="Mediana">
+									Mediana
+								</label>
+								<img class="img-circle media-object pull-right" src="./images/pizza1.png" width="32"
+									height="32">
+							</div>
+						</li>
+						<li class="list-group-item">
+							<div class="radio">
+								<label>
+									<input type="radio" id="tamaño3" name="tamaño" value="Grande">
+									Grande
+								</label>
+								<img class="img-circle media-object pull-right" src="./images/pizza1.png" width="42"
+									height="42">
+							</div>
+						</li>
+					</ul>
+					<!--Masa-->
+					<h1>
+						<img class="img-circle media-object pull-left" src="./images/3.png" width="32" height="32">
+					</h1>
+					<ul class="list-group">
+						<li class="list-group-item">
+							<div class="radio">
+								<label>
+									<input type="radio" id="masa1" name="masa" value="Delgada" checked>
+									Delgada
+								</label>
+								<img class="img-circle media-object pull-right" src="./images/pizza2.png" width="42"
+									height="32">
+							</div>
+						</li>
+						<li class="list-group-item">
+							<div class="radio">
+								<label>
+									<input type="radio" id="masa2" name="masa" value="Gruesa">
+									Gruesa
+								</label>
+								<img class="img-circle media-object pull-right" src="./images/pizza2.png" width="42"
+									height="52">
+							</div>
+						</li>
+                </div>
+                <div class="pane" id="separacion1">
+                    <h1>
+						<img class="img-circle media-object pull-left" src="./images/4.png" width="32" height="32">
+					</h1>
+					<div id="ingredientes">
+
+					</div>
+					<div>Total = <span id="precio">0</span>€</div>
+                </div>
+            </div>
+           
+        </div>
+        <footer class="toolbar toolbar-footer">
+            <div class="toolbar-actions">
+                <button class="btn btn-primary pull-right" id="cancelar">
+                    Cancelar
+                </button>
+                <button class="btn btn-primary pull-right" id="aceptar">
+                    Aceptar
+                </button>
+            </div>
+        </footer>
+        <script src="index.js" type="module"> </script>
+</body>
+</html>
