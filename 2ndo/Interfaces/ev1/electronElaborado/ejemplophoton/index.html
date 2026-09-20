@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="photon.min.css">
+    <title>Photon</title>
+</head>
+
+<body>
+    <div class="window"><!--Clase base para crear una ventana photon-->
+        <!--Barra de cabecera-->
+        <header class="toolbar toolbar-header">
+            <h1 class="title">Header</h1>
+        </header>
+        <!--Contenido principal de la ventana-->
+        <div class="window-content">
+            <!--Clase de paneles-->
+            <div class="pane-group">
+                <!--Panel derecho-->
+                <div class="pane-sm sidebar">
+                    ...
+                </div>
+                <!--Panel central-->
+                <div class="pane">
+                    ...
+                </div>
+            </div>
+        </div>
+        <!--Barra de pie-->
+        <footer class="toolbar toolbar-footer">
+            <h1 class="title">Footer</h1>
+        </footer>
+    </div>
+</body>
+<script>
+    require("./index.js");
+</script>
+</html>

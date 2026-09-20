@@ -1,0 +1,59 @@
+<odoo>
+    <data>
+        <record id="1" model="cestacompra.tipo_producto">
+            <field name="name">TProducto1</field>
+            <field name="precio">1</field>
+        </record>
+
+        <record id="2" model="cestacompra.tipo_producto">
+            <field name="name">TProducto2</field>
+            <field name="precio">2</field>
+        </record>
+
+        <record id="3" model="cestacompra.tipo_producto">
+            <field name="name">TProducto3</field>
+            <field name="precio">3</field>
+        </record>
+
+        <record id="1" model="cestacompra.cliente">
+            <field name="name">Paco</field>
+            <field name="apellidos">Garcia</field>
+            <field name="direccion">C/1</field>
+            <field name="fecha_nacimiento">1999-06-28</field>
+        </record>
+
+        <record id="2" model="cestacompra.cliente">
+            <field name="name">Pedro</field>
+            <field name="apellidos">López</field>
+            <field name="direccion">C/2</field>
+            <field name="fecha_nacimiento">1968-11-15</field>
+        </record>
+
+        <record id="1" model="cestacompra.empleado">
+            <field name="name">Antonia</field>
+            <field name="apellidos">Jiménez</field>
+            <field name="direccion">C/2</field>
+            <field name="fecha_nacimiento">1962-11-15</field>
+            <field name="posicion">P1</field>
+            <field name="sueldo">2000</field>
+        </record>
+
+        <record id="1" model="cestacompra.establecimiento">
+            <field name="name">Establecimiento1</field>
+            <field name="direccion">C/3</field>
+            <field name="presupuesto">2000000</field>
+            <field name="propietario_id">1</field>
+        </record>
+
+        <record id="2" model="cestacompra.empleado">
+            <field name="name">Sara</field>
+            <field name="apellidos">Moliner</field>
+            <field name="direccion">C/2</field>
+            <field name="fecha_nacimiento">1996-10-15</field>
+            <field name="posicion">P2</field>
+            <field name="sueldo">2000</field>
+            <field name="establecimiento_id">1</field>
+        </record>
+
+    </data>
+</odoo>

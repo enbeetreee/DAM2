@@ -1,0 +1,10 @@
+.form{
+    margin: auto;
+}
+
+button:hover{
+    cursor: pointer;
+}
+button *:hover{
+    cursor: pointer;
+}

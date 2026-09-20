@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Calendario</title>
+    <link rel="stylesheet" href="css/examen.css">
+</head>
+
+<body>
+    <div id="popup1">
+        <div class="form" id="form">
+            <p>Gestiona tu evento</p>
+            <div>
+                <input type="text" id="nEvento" placeholder="MiEvento">
+            </div>
+            <div><textarea name="" id="dEvento" placeholder="Descripción"></textarea></div>
+            <div class="formbtns">
+                <button class="btn active" id="btnGuardar"></button>
+                <button class="btn active" id="btnVolver"></button>
+            </div>
+
+        </div>
+    </div>
+    <div id="popup2">
+        <div class="error" id="error">
+            <p>No se pueden añadir más de 3 eventos por día</p>
+            <button class="btn active" id="btnError">Aceptar</button>
+        </div>
+    </div>
+    <header>
+        <div>
+            <span class="icon icon-calendar"></span><br>
+            <p>Calendario Escolar 2024-25</p>
+        </div>
+
+    </header>
+    <main>
+        <div class="nav">
+            <div class="btns"><span class="btn-group">
+                    <button class="btn active" id="btnAnt">&lt;</button>
+                    <button class="btn active" id="btnSig">&gt;</button>
+                </span>
+                <button class="btn inactive" id="btnHoy">Hoy</button>
+            </div>
+
+
+            <div class="mes" id="mes"></div>
+            <div class="group-reloj"><button class="btn active" id="btnReloj">12h</button>
+                <div class="reloj" id="reloj"></div>
+            </div>
+
+        </div>
+        <table id="tabla"></table>
+    </main>
+    <script>
+        require("./index.js");
+    </script>
+</body>
+
+</html>

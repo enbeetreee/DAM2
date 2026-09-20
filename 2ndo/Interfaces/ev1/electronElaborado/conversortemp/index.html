@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="conversor.css">
+    <title>Photon</title>
+</head>
+
+<body>
+    
+    <div class="wrapper">
+        <div><label>Grado Celsius</label></div>
+        <div><input type="text" id="celsius"></div>
+        <div><label>Grado Kelvin</label></div>
+        <div><input type="text" id="kelvin" readonly="readonly"></div>
+        <div><button id="convertir">Convertir</button></div>
+        <div><button id="limpiar">Limpiar</button></div>
+    </div>
+    <script>
+        let bconv = document.getElementById("convertir");
+        let bclean = document.getElementById("limpiar");
+        let ctext = document.getElementById("celsius");;
+        let ktext = document.getElementById("kelvin");;
+        bconv.addEventListener('click',()=>{
+            ktext.value = (parseInt(ctext.value)+273.15).toString();
+        });
+        bclean.addEventListener('click',()=>{
+            ctext.value = "";
+            ktext.value = "";
+        })
+    </script>
+
+
+</body>
+
+</html>

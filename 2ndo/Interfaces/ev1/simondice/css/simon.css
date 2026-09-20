@@ -1,0 +1,112 @@
+body{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background-color:navajowhite;
+}
+body * {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#tabla{
+    height: 450px;
+    max-height: 450px;
+    width: 450px;
+    margin: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px #233D4D solid;
+    background-color: white;
+}
+.btnTabla{
+    
+    height: 20%;
+    width: 20%;
+    border: 1px #233D4D solid;
+}
+footer{
+    margin: auto;
+    width: 450px;
+    margin-top: 20px;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#btnStart{
+    height: 30px;
+    width: 150px;
+    margin-left: 70px;
+    margin-right: 70px;
+}
+#dificultad{
+    height: 30px;
+    width: 70px;
+}
+.score{
+    width: 70px;
+    font-size: 14px;
+
+}
+
+/*Menus*/
+h1{
+    /*color: #233D4D*/
+    margin-bottom: 40px;
+}
+.btnMenu{
+    font-size: 17px;
+}
+button:hover{
+    margin-top: 8px;
+    margin-bottom: 12px;
+}
+#menu{
+    padding-top: 40px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: space-around;
+
+}
+.btnMenu{ 
+    height: 50px;
+    width: 150px;
+    display: block;
+    margin: 10px;
+
+}
+.btnBack{
+    font-size: 16px;
+    height: 30px;
+    width: 30px;
+    margin-left: 20px;
+    margin-right: -50px;
+    float: left;
+}
+.btnBack:hover{
+    margin-top: -2px;
+    margin-bottom: 2px;
+}
+#divScore{
+    padding-top: 10px;
+}
+#divInScore{
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.recTit{
+
+    align-self: center;
+}
+#scoreTable{
+    align-self: center;
+    width: 200px;
+}
+#scoreTable tr{
+    height: 50px;
+}

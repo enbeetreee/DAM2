@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <link rel="stylesheet" href="css/photon.min.css">
+    <link rel="stylesheet" href="css/crud.css">
+</head>
+
+<body>
+    <div class="window">
+        <div class="toolbar toolbar-header">
+            <h1 class="title">Clientes</h1>
+        </div>
+        <div class="window-content">
+
+            <div class="form">
+                <div class="form-group">
+                    <label>DNI</label>
+                    <input id="inDni" type="text" class="form-control" placeholder="e. j: 79161848B">
+                </div>
+
+
+                <div class="form-group">
+                    <label>Nombre</label>
+                    <input id="inName" type="text" class="form-control" placeholder="">
+                </div>
+
+
+                <div class="form-group">
+                    <label>Teléfono</label>
+                    <input id="inTel" type="tel" class="form-control" placeholder="e. j: 911111111">
+                </div>
+                <nav>
+                    <button id="bfirst" class="btn btn-primary"><span class="icon icon-to-start"></span></button>
+                    <button id="bback" class="btn btn-primary"><span class="icon icon-left"></span></button>
+                    <button id="bnext" class="btn btn-primary"><span class="icon icon-right"></span></button>
+                    <button id="blast" class="btn btn-primary"><span class="icon icon-to-end"></span></button>
+                    <button id="berase" class="btn btn-primary"><span class="icon icon-erase"></span></button>
+                    <button id="bsave" class="btn btn-primary"><span class="icon icon-folder"></span></button>
+                    <button id="bact" class="btn btn-primary"><span class="icon icon-floppy"></span></button>
+                </nav>
+            </div>
+        </div>
+        <div class="toolbar toolbar-footer">
+            <h1 class="title"> Formulario clientes usando ficheros JSON</h1>
+        </div>
+    </div>
+</body>
+<script>
+    require("./index.js");
+</script>
+</html>
